@@ -8,4 +8,8 @@
 
 #### 01.02 基本控件元素
 文本控件：textInput、passwordInput、textAreaInput
-数字控件；numericInput、sliderInput
+数字控件：numericInput、sliderInput
+日期控件：dateInput、dateRangeInput
+选项控件：selectInput、radioButtons、checkboxInput
+文件控件：fileInput
+按钮：actionButton
