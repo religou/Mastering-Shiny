@@ -26,12 +26,31 @@ ui <- fluidPage(
     ),
     fluidRow(
         actionButton("eat", "Eat me!", class = "btn-block")
-    )
+    ),
     
+    textOutput(outputId = "txt"),
+    verbatimTextOutput(outputId = "summary"),
+    
+    tableOutput(outputId = "static"),
+    dataTableOutput(outputId = "dynamic"),
+    
+    plotOutput(outputId = "plot")
 ) 
     
 server <- function(input, output, session) {
+    output$txt <- renderText({
+        "Hello, Rshiny!"
+    })
     
+    output$summary <- renderPrint({
+        summary(1:10)
+    })
+    
+    output$static <- renderTable(head(mtcars))
+    
+    output$dynamic <- renderDataTable(mtcars, options = list(pageLength = 5, initComplete = I("function(settings, json) {alert('Done.');}")))
+    
+    output$plot <- renderPlot(plot(1:4))
 }
 
 shinyApp(ui, server)

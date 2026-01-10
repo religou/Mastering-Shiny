@@ -13,3 +13,6 @@
 选项控件：selectInput、radioButtons、checkboxInput
 文件控件：fileInput
 按钮：actionButton
+文本输出：textOutput、verbatimTextOutput
+表格：tableOutput、dataTableOutput
+图形：plotOutput
