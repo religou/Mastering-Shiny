@@ -7,7 +7,10 @@ ui <- fluidPage(
     
     numericInput(inputId = "age", label = "Age", value = 18, min = 16, max = 100),
     sliderInput(inputId = "height", label = "Height", value = 165, min = 150, max = 200),
-    sliderInput(inputId = "weight", label = "Weight", value = c(100, 120), min = 90, max = 200)
+    sliderInput(inputId = "weight", label = "Weight", value = c(100, 120), min = 90, max = 200),
+    
+    dateInput(inputId = "borndat", label = "Born Date"),
+    dateRangeInput(inputId = "vocadat", label = "When do you want to go on vacation next?")
 ) 
     
 server <- function(input, output, session) {

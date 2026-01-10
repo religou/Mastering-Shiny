@@ -8,3 +8,4 @@
 
 #### 01.02 基本控件元素
 文本控件：textInput、passwordInput、textAreaInput
+数字控件；numericInput、sliderInput
